@@ -108,4 +108,4 @@ gulp.task('htmlmin', function () {
 
 gulp.task('modify', gulp.series('modifycss', 'compress', 'uglifyjs', 'htmlmin'));
 
-gulp.task('dev', gulp.series('build', 'modify', gulp.parallel('watch', 'serve')));
+gulp.task('dev', gulp.series('build', gulp.parallel('watch', 'serve')));
